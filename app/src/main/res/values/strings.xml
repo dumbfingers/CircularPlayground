@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Circular Playground</string>
+    <string name="title_credit_score">Your credit score is\n%1$s\nout of 700</string>
 </resources>
