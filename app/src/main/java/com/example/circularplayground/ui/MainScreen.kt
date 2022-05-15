@@ -1,4 +1,4 @@
-package com.example.circularplayground.ui.theme
+package com.example.circularplayground.ui
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
@@ -7,6 +7,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.circularplayground.ui.theme.CircularPlaygroundTheme
 
 @Composable
 internal fun MainScreen() {
