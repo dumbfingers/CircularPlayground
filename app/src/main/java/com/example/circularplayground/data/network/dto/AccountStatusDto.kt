@@ -2,7 +2,7 @@ package com.example.circularplayground.data.network.dto
 
 import com.google.gson.annotations.SerializedName
 
-data class AccountStatus(
+data class AccountStatusDto(
     @SerializedName("accountIDVStatus")
     val accountIDVStatus: String,
     @SerializedName("creditReportInfo")
