@@ -1,4 +1,4 @@
-package com.example.circularplayground.ui.theme
+package com.example.circularplayground.theme
 
 import androidx.compose.ui.graphics.Color
 

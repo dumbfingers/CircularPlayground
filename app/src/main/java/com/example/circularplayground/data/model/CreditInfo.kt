@@ -1,4 +1,4 @@
-package com.example.circularplayground
+package com.example.circularplayground.data.model
 
 import com.google.gson.annotations.SerializedName
 

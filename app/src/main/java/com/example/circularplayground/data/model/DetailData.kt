@@ -1,4 +1,4 @@
-package com.example.circularplayground
+package com.example.circularplayground.data.model
 
 data class DetailData(
     val currentShortTermUtilisation: Int?,

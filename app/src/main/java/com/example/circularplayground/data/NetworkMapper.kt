@@ -1,5 +1,8 @@
-package com.example.circularplayground
+package com.example.circularplayground.data
 
+import com.example.circularplayground.data.model.AccountStatus
+import com.example.circularplayground.data.model.CoachingSummary
+import com.example.circularplayground.data.model.CreditInfo
 import com.example.circularplayground.data.network.dto.AccountStatusDto
 import com.example.circularplayground.data.network.dto.CoachingSummaryDto
 import com.example.circularplayground.data.network.dto.CreditInfoDto

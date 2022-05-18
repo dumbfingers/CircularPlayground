@@ -1,11 +1,11 @@
-package com.example.circularplayground
+package com.example.circularplayground.ui
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
-import com.example.circularplayground.ui.DetailScreen
+import com.example.circularplayground.ui.detail.DetailScreen
 import com.google.accompanist.navigation.animation.composable
-import com.example.circularplayground.ui.MainScreen
+import com.example.circularplayground.ui.main.MainScreen
 import com.google.accompanist.navigation.animation.AnimatedNavHost
 
 sealed class Screens(private val route: String) {

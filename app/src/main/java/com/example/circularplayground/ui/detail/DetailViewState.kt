@@ -1,4 +1,4 @@
-package com.example.circularplayground.ui
+package com.example.circularplayground.ui.detail
 
 data class DetailViewState(
     val currentShortTermUtilisation: Int? = null,

@@ -1,6 +1,8 @@
-package com.example.circularplayground
+package com.example.circularplayground.ui.main
 
 import androidx.lifecycle.viewModelScope
+import com.example.circularplayground.DataRepository
+import com.example.circularplayground.ui.common.ReduxViewModel
 import com.example.circularplayground.data.Resource
 import com.example.circularplayground.utils.CoroutineDispatchers
 import dagger.hilt.android.lifecycle.HiltViewModel
