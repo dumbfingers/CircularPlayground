@@ -1,4 +1,4 @@
-package com.example.circularplayground
+package com.example.circularplayground.data.model
 
 data class AccountStatus(
     val accountIDVStatus: String,

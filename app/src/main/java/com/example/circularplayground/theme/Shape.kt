@@ -1,4 +1,4 @@
-package com.example.circularplayground.ui.theme
+package com.example.circularplayground.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes

@@ -1,4 +1,4 @@
-package com.example.circularplayground
+package com.example.circularplayground.ui.main
 
 data class MainViewState(
     val isLoading: Boolean = false,

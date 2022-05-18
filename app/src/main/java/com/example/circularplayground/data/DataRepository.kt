@@ -1,11 +1,13 @@
-package com.example.circularplayground
+package com.example.circularplayground.data
 
 import android.content.Context
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.preferencesDataStore
-import com.example.circularplayground.data.Resource
+import com.example.circularplayground.data.model.AccountStatus
+import com.example.circularplayground.data.model.CreditInfo
+import com.example.circularplayground.data.model.DetailData
 import com.example.circularplayground.data.network.CircularService
 import com.example.circularplayground.utils.Constants.KEY_CHANGE_IN_LONG_TERM
 import com.example.circularplayground.utils.Constants.KEY_CHANGE_IN_SHORT_TERM
@@ -43,7 +45,7 @@ class DataRepository @Inject constructor(
         }
     }
 
-    suspend fun saveDetailData(creditInfo: CreditInfo) {
+    private suspend fun saveDetailData(creditInfo: CreditInfo) {
         context.dataStore.edit { pref ->
             pref[KEY_CURRENT_SHORT_TERM_UTIL] = creditInfo.currentShortTermCreditUtilisation ?: 0
             pref[KEY_CHANGE_IN_SHORT_TERM] = creditInfo.changeInShortTermDebt ?: 0

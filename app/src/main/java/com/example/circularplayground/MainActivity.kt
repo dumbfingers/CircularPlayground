@@ -4,7 +4,8 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material.Scaffold
-import com.example.circularplayground.ui.theme.CircularPlaygroundTheme
+import com.example.circularplayground.theme.CircularPlaygroundTheme
+import com.example.circularplayground.ui.AppNavigation
 import com.google.accompanist.navigation.animation.rememberAnimatedNavController
 import dagger.hilt.android.AndroidEntryPoint
 

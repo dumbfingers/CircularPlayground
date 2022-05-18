@@ -1,8 +1,8 @@
-package com.example.circularplayground.ui
+package com.example.circularplayground.ui.detail
 
 import androidx.lifecycle.viewModelScope
-import com.example.circularplayground.DataRepository
-import com.example.circularplayground.ReduxViewModel
+import com.example.circularplayground.data.DataRepository
+import com.example.circularplayground.ui.common.ReduxViewModel
 import com.example.circularplayground.utils.CoroutineDispatchers
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
