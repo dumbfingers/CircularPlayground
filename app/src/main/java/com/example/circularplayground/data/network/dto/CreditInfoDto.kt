@@ -32,7 +32,7 @@ data class CreditInfoDto(
     @SerializedName("currentShortTermCreditLimit")
     val currentShortTermCreditLimit: Long,
     @SerializedName("currentShortTermCreditUtilisation")
-    val currentShortTermCreditUtilisation: Long,
+    val currentShortTermCreditUtilisation: Int?,
     @SerializedName("changeInShortTermDebt")
     val changeInShortTermDebt: Long,
     @SerializedName("currentLongTermDebt")
@@ -42,7 +42,7 @@ data class CreditInfoDto(
     @SerializedName("currentLongTermCreditLimit")
     val currentLongTermCreditLimit: Long?,
     @SerializedName("currentLongTermCreditUtilisation")
-    val currentLongTermCreditUtilisation: Long?,
+    val currentLongTermCreditUtilisation: Int?,
     @SerializedName("changeInLongTermDebt")
     val changeInLongTermDebt: Long?,
     @SerializedName("numPositiveScoreFactors")
