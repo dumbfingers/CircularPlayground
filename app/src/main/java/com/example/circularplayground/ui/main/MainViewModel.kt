@@ -16,10 +16,10 @@ class MainViewModel @Inject constructor(
 ): ReduxViewModel<MainViewState>(MainViewState()) {
 
     init {
-        onLoad()
+        refresh()
     }
 
-    private fun onLoad() {
+    fun refresh() {
         viewModelScope.launch(dispatchers.io) {
             dataRepository.getAccountStatus().collect {
                 when (it.status) {

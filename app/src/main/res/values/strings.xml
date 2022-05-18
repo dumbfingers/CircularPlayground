@@ -8,4 +8,5 @@
     <string name="title_change_long_term_credit">Changes in Long Term Credit</string>
     <string name="title_days_next_report">Days Until Next Report</string>
     <string name="title_credit_status">Your Credit Status</string>
+    <string name="action_retry">Retry</string>
 </resources>
