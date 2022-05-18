@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">Circular Playground</string>
     <string name="title_credit_score">Your credit score is\n%1$s\nout of 700</string>
+    <string name="title_loading">Loading your credit score</string>
+    <string name="title_short_term_credit_usage">Current Short Term Credit Usage</string>
+    <string name="title_long_term_credit_usage">Current Long Term Credit Usage</string>
+    <string name="title_change_short_term_credit">Changes in Short Term Credit</string>
+    <string name="title_change_long_term_credit">Changes in Long Term Credit</string>
+    <string name="title_days_next_report">Days Until Next Report</string>
+    <string name="title_credit_status">Your Credit Status</string>
 </resources>
