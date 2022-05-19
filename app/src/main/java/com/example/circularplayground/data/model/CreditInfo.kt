@@ -16,7 +16,7 @@ data class CreditInfo(
     val changedScore: Int,
     val currentShortTermDebt: Long,
     val currentShortTermNonPromotionalDebt: Long,
-    val currentShortTermCreditLimit: Long,
+    val currentShortTermCreditLimit: Long?,
     val currentShortTermCreditUtilisation: Int?,
     val changeInShortTermDebt: Long?,
     val currentLongTermDebt: Long,
