@@ -1,13 +1,9 @@
 package com.example.circularplayground.data
 
-import android.content.Context
 import androidx.datastore.core.DataStore
-import androidx.datastore.preferences.core.PreferenceDataStoreFactory
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.preferencesOf
-import androidx.datastore.preferences.preferencesDataStoreFile
-import androidx.test.core.app.ApplicationProvider
 import com.example.circularplayground.CoroutineTestRule
 import com.example.circularplayground.data.model.AccountStatus
 import com.example.circularplayground.data.model.DetailData
@@ -24,9 +20,6 @@ import io.mockk.mockk
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.flow.toCollection
-import kotlinx.coroutines.test.TestScope
-import kotlinx.coroutines.test.createTestCoroutineScope
-import kotlinx.coroutines.test.runBlockingTest
 import kotlinx.coroutines.test.runTest
 import okhttp3.ResponseBody
 import org.junit.Before
