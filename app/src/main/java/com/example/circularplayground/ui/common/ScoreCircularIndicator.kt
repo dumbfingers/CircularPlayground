@@ -16,6 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.AnnotatedString
@@ -95,12 +96,12 @@ internal fun ScoreCircularIndicator(
         )
         if (isLoading) {
             CircularProgressIndicator(
-                modifier = Modifier.fillMaxSize(0.9f),
+                modifier = Modifier.fillMaxSize(0.9f).testTag("loading"),
                 strokeWidth = 2.dp,
             )
         } else {
             CircularProgressIndicator(
-                modifier = Modifier.fillMaxSize(0.9f),
+                modifier = Modifier.fillMaxSize(0.9f).testTag("donut"),
                 progress = currentScore.toFloat() / totalScore.toFloat(),
                 strokeWidth = 2.dp,
             )
