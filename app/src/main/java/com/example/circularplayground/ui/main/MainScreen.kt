@@ -44,9 +44,6 @@ internal fun MainScreen(
 ) {
     val actionLabel = stringResource(id = R.string.action_retry)
     val scaffoldState = rememberScaffoldState()
-    var snackbarResult by remember {
-        mutableStateOf(SnackbarResult.Dismissed)
-    }
 
     Scaffold(
         scaffoldState = scaffoldState,
@@ -73,20 +70,13 @@ internal fun MainScreen(
         LaunchedEffect(
             key1 = Unit,
             block = {
-                snackbarResult = scaffoldState.snackbarHostState.showSnackbar(
+                val snackbarResult = scaffoldState.snackbarHostState.showSnackbar(
                     message = viewState.error,
                     actionLabel = actionLabel,
                 )
-            },
-        )
-    }
-
-
-    if (snackbarResult == SnackbarResult.ActionPerformed) {
-        LaunchedEffect(
-            key1 = Unit,
-            block = {
-                onRetry()
+                if (snackbarResult == SnackbarResult.ActionPerformed) {
+                    onRetry()
+                }
             },
         )
     }
