@@ -20,13 +20,11 @@ import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 import javax.inject.Singleton
 
-val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "creditInfo")
-
 @Singleton
 class DataRepository @Inject constructor(
     private val circularService: CircularService,
     private val mapper: NetworkMapper,
-    private val context: Context
+    private val dataStore: DataStore<Preferences>
 ) {
     fun getAccountStatus(): Flow<Resource<AccountStatus>> {
         return flow {
@@ -46,7 +44,7 @@ class DataRepository @Inject constructor(
     }
 
     private suspend fun saveDetailData(creditInfo: CreditInfo) {
-        context.dataStore.edit { pref ->
+        dataStore.edit { pref ->
             pref[KEY_CURRENT_SHORT_TERM_UTIL] = creditInfo.currentShortTermCreditUtilisation ?: 0
             pref[KEY_CHANGE_IN_SHORT_TERM] = creditInfo.changeInShortTermDebt ?: 0
             pref[KEY_CURRENT_LONG_TERM_UTIL] = creditInfo.currentLongTermCreditUtilisation ?: 0
@@ -56,7 +54,7 @@ class DataRepository @Inject constructor(
     }
 
     fun getDetailData(): Flow<DetailData> {
-        return context.dataStore.data.map { pref ->
+        return dataStore.data.map { pref ->
             DetailData(
                 currentShortTermUtilisation = pref[KEY_CURRENT_SHORT_TERM_UTIL],
                 changeInShortTerm = pref[KEY_CHANGE_IN_SHORT_TERM],
