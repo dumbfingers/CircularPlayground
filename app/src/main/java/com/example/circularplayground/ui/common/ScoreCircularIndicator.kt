@@ -33,12 +33,14 @@ internal fun ScoreCircularIndicator(
     currentScore: Int,
     totalScore: Int,
     isLoading: Boolean,
+    isEnabled: Boolean = true,
     onClick: () -> Unit,
 ) {
     Box(
         modifier = modifier
             .size(192.dp)
             .clickable(
+                enabled = isEnabled,
                 role = Role.Button,
                 onClick = onClick
             ),

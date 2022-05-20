@@ -54,6 +54,7 @@ internal fun MainScreen(
                         currentScore = viewState.currentScore,
                         totalScore = viewState.totalScore,
                         isLoading = viewState.isLoading,
+                        isEnabled = viewState.error.isEmpty() && !viewState.isLoading,
                         onClick = {
                             openDetails(viewState.clientRef)
                         }
