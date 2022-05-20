@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.compose.ui.semantics.SemanticsActions
 import androidx.compose.ui.test.assertHasClickAction
 import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.ui.test.assertIsNotEnabled
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
@@ -65,6 +66,7 @@ class MainScreenTest {
     @Test
     fun when_score_isLoaded_show_donut_with_score_title() {
         val state = MainViewState(
+            isLoading = false,
             currentScore = 500,
             totalScore = 700
         )
@@ -110,6 +112,7 @@ class MainScreenTest {
     @Test
     fun when_click_donut_verify_openDetails_action() {
         val state = MainViewState(
+            isLoading = false,
             clientRef = "ref-010",
             currentScore = 500,
             totalScore = 700
@@ -123,6 +126,24 @@ class MainScreenTest {
             val slot = slot<String>()
             verify { action(capture(slot)) }
             assertThat(slot.captured).isEqualTo(state.clientRef)
+        }
+    }
+
+    @Test
+    fun when_in_error_state_disables_click() {
+        val state = MainViewState(
+            isLoading = false,
+            error = "Error",
+            currentScore = 500,
+            totalScore = 700
+        )
+        val action: (String) -> Unit = mockk(relaxed = true)
+        show(state = state, openDetails = action)
+        composeTestRule.apply {
+            onNodeWithTag("donut")
+                .onParent()
+                .assertHasClickAction()
+                .assertIsNotEnabled()
         }
     }
 
